@@ -83,3 +83,9 @@ class MakeTeam:
             team.extend(self.channel_mem[i:self.mem_len:party_num])
 
         return ('\n'.join(team))
+    
+    　　@client.event
+　　　　async def on_message(message):
+        if message.content.startswith("ありがとう"):
+        filepath = 'https://cdn.discordapp.com/attachments/738042696018558983/738042782505107536/arigatou.jpg'
+        await client.send_file(message.channel,filepath)
